@@ -129,8 +129,12 @@
 	}
 
 	/* Efek hover (opsional) */
-	.swiper-slide:hover {
+	/*.swiper-slide:hover {
 		transform: scale(1.03);
+	}*/
+
+	.swiper-slide:hover {
+		transform: scale(1.2);
 	}
 
 	/* Atur posisi pagination agar tidak menutupi slide */
@@ -202,15 +206,38 @@
 					<div class="extra-intro">
 						<br>
 						<p>
-							Sebagai Front End Developer, saya suka dengan design UI/UX, bagi saya mendesign website dengan kreatifitas dan kenyamanan pengguna adalah suatu keharusan, karena selain indah diliat, namun juga dapat mempengaruhi pasar, yang mana orang-orang akan lebih senang pada suatu website yang indah dan nyaman.
+							Pengalaman:
 						</p>
-						<br>
 						<p>
-							Sebagai Back End Developer, saya suka dengan Back End, yang mana itu adalah fungsi di balik tampilan, memprogram dan memperbaiki bug adalah suatu tantangan yang menarik, dimana saya bisa menciptakan atau memperbaiki sebuah website agar seperti seharusnya.
-						</p>
-						<br>
-						<p>
-							Sebagai Fullstack Developer, menjadi Fullstack Developer itu adalah hal yang menarik bagi saya, developer mengerjakan Front End sekaligus Back End, yang mana itu adalah tantangan yang berupa membuat design, fungsi dan memperbaiki bug yang ada agar website itu menjadi website yang sempurna.
+							1. Fullstack membuat website Toko Online sederhana dengan database MySQL untuk kelulusan SMK
+							<br>
+							2. Membuat website berita untuk fakultas FISIP UMJ dengan gabungan CI 3 dan Wordpress dengan database MySQL
+							<br>
+							3. Fullstack membuat program CRUD dengan database MySQL dan Python
+							<br>
+							4. Fullstack membuat aplikasi desktop enkripsi/dekripsi file video dan pemutar file video dengan Visual Studio
+							<br>
+							5. Mengintegrasikan fitur login via akun Google dengan framework Laravel dengan database MySQL
+							<br>
+							6. Mengintergrasikan API ongkir dari Biteship dengan framework Laravel
+							<br>
+							7. Membuat CRUD Rest API Node JS dengan framework Express atau Fastify dengan database MongoDB
+							<br>
+							8. Fullstack CRUD beserta login aplikasi Poliklinik sederhana dengan framework Flutter dan database shared_preferences
+							<br>
+							9. Fullstack CRUD beserta login dengan framework Flutter dengan database SQLite
+							<br>
+							10. Fullstack membuat CRUD beserta login aplikasi Android toko online sederhana dengan framework Flutter dan database MockAPI
+							<br>
+							11. Membuat website POS dengan framework Laravel
+							<br>
+							12. Fullstack membuat aplikasi Android penghapus background menggunakan AI dengan Flutter
+							<br>
+							13. Fullstack membuat website toko online penjualan sepatu yang terintegrasi dengan API ongkir biteship 
+							<br>
+							14. Fullstack membuat aplikasi POS Ayam Geprek dengan framework Flutter dan database SQLite yang siap digunakan untuk UMKM perorangan
+							<br>
+							15. Fullstack membuat aplikasi Android file manajer dengan Flutter
 						</p>
 					</div>
 					<div class="intro-read-more">
@@ -431,7 +458,7 @@
 						<div class="swiper">
 							<div class="swiper-wrapper">
 								<div class="swiper-slide" style="background-image: url(./images/point-of-sale/Screenshot\ 2026-09-10\ 040854.png);"></div>
-								<div class="swiper-slide" style="background-image: url(./images/point-of-sale/Screenshot\ 2026-09-10\ 040906.png);"></div>
+								<div class="swiper-slide" style="background-image: url(./images/point-of-sale/Screenshot\ 2026-09-10\ 131242.png);"></div>
 								<div class="swiper-slide" style="background-image: url(./images/point-of-sale/Screenshot\ 2026-09-10\ 040917.png);"></div>
 								<div class="swiper-slide" style="background-image: url(./images/point-of-sale/Screenshot\ 2026-09-10\ 041022.png);"></div>
 							</div>
@@ -446,6 +473,31 @@
 		</div>
 	</center>
 	<center class="info-6">
+		<div class="certificates">
+			<div class="certificate-title">
+				<h2>Sertifikat</h2>
+			</div>
+			<div class="row-group">
+				 <!-- Wrapper flex untuk 3 swiper -->
+				<div class="swiper-wrapper-container" style="justify-content: start;">
+					<!-- Swiper 1 -->
+					<div class="swiper-item">
+						<div class="swiper">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide" style="background-image: url(./images/certificates/19232125-1.png); background-size:contain;background-position:center;background-repeat:no-repeat;"></div>
+								<div class="swiper-slide" style="background-image: url(./images/certificates/19232125-2.png); background-size:contain;background-position:center;background-repeat:no-repeat;"></div>
+							</div>
+							<div class="swiper-pagination"></div>
+							<div class="swiper-button-prev"></div>
+							<div class="swiper-button-next"></div>
+						</div>
+						<div class="swiper-description">Sertifikat BNSP Database Administrator</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</center>
+	<center class="info-7">
 		<div class="contact-information">
 			<div class="contact-information-title">
 				<h2>Kontak</h2>
@@ -472,6 +524,14 @@
 		</center>
 	</footer>
 	<div id="toTop"><i class="fa fa-angle-up arrow-up"></i></div>
+
+	<!-- ===== LIGHTBOX / PREVIEW GAMBAR ===== -->
+	<div class="image-preview" id="imagePreview">
+		<span class="image-preview-close" id="imagePreviewClose">
+			<i class="fa fa-times" aria-hidden="true"></i>
+		</span>
+		<img src="" alt="Preview" id="imagePreviewImg" class="image-preview-img">
+	</div>
 </body>
 	<script type="text/javascript">
 
@@ -565,13 +625,73 @@ $(document).ready(function(){
 		});
 	});
 </script>
-<script>
+<script type="text/javascript">
     document.addEventListener('DOMContentLoaded', function() {
         document.querySelectorAll('.swiper-slide').forEach(function(slide) {
             slide.addEventListener('contextmenu', function(e) {
                 e.preventDefault();
             });
         });
+
+		
+		document.querySelector('#imagePreviewImg').addEventListener('contextmenu', function(e) {
+			e.preventDefault();
+		});
     });
 </script>
+<script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', function () {
+        const preview       = document.getElementById('imagePreview');
+        const previewImg    = document.getElementById('imagePreviewImg');
+        const previewClose  = document.getElementById('imagePreviewClose');
+
+        // Fungsi untuk mengambil URL gambar dari background-image
+        function getBgUrl(el) {
+            const bg = window.getComputedStyle(el).backgroundImage;
+            // Format: url("...") atau url(...)
+            const match = bg.match(/url\(["']?(.*?)["']?\)/);
+            return match ? match[1] : null;
+        }
+
+        // Klik pada slide → buka preview
+        document.querySelectorAll('.swiper-item .swiper-slide').forEach(function (slide) {
+            slide.addEventListener('click', function () {
+                const url = getBgUrl(this);
+                if (!url) return;
+
+                previewImg.src = url;
+                preview.classList.add('active');
+                document.body.classList.add('no-scroll');
+            });
+        });
+
+        // Fungsi tutup preview
+        function closePreview() {
+            preview.classList.remove('active');
+            document.body.classList.remove('no-scroll');
+            // kosongkan src setelah animasi selesai
+            setTimeout(function () {
+                previewImg.src = '';
+            }, 250);
+        }
+
+        // Klik tombol close
+        previewClose.addEventListener('click', closePreview);
+
+        // Klik area gelap di luar gambar → tutup
+        preview.addEventListener('click', function (e) {
+            if (e.target === preview) {
+                closePreview();
+            }
+        });
+
+        // Tekan ESC → tutup
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape' && preview.classList.contains('active')) {
+                closePreview();
+            }
+        });
+    });
+</script>
+
 </html>
